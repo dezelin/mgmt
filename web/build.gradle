@@ -78,3 +78,18 @@ jar {
     from zipTree("${buildDir}/web.jar")
     manifest.attributes('Main-Class': 'org.jruby.JarBootstrapMain')
 }
+
+task releaseZip(type:Zip, dependsOn: jar ){
+  ['public', 'views', 'templates','config','bin'].each {p -> into(p){ from p} }
+  from jar
+}
+
+artifacts {
+  releases releaseZip
+}
+
+artifactoryPublish {
+  skip = false //Skip build info analysis and publishing (false by default) 
+  publishConfigs (configurations.releases)
+  // properties = ['qa.level': 'basic', 'q.os': 'win32, deb, osx']
+}

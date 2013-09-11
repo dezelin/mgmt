@@ -1,8 +1,11 @@
+
+
 allprojects {
+  apply plugin: 'artifactory'
   repositories {
     mavenRepo(url:'http://dl.bintray.com/content/narkisr/narkisr-jars/')
     maven {
-	url 'http://cloudius.artifactoryonline.com/cloudius/repo'
+	url 'https://cloudius.artifactoryonline.com/cloudius/repo'
       credentials {
        username = 'reader'
        password = 'oamahG7e'
@@ -11,7 +14,37 @@ allprojects {
   }
 }
 
+artifactory {
+  publish {
+    contextUrl = 'https://cloudius.artifactoryonline.com/cloudius/'
+    repository {
+      repoKey = 'mgmt-releases'
+      username = 'reader'
+      password = 'oamahG7e'
+    }
+   }
+}
+
+buildscript {
+  repositories {
+    maven { url 'http://dl.bintray.com/jfrog/jfrog-jars' }
+    maven {
+	url 'https://cloudius.artifactoryonline.com/cloudius/repo'
+      credentials {
+       username = 'reader'
+       password = 'oamahG7e'
+      }
+    }
+
+  }
+  dependencies {
+    classpath(group: 'org.jfrog.buildinfo', name: 'build-info-extractor-gradle', version: '2.1.0')
+  }
+}
+
+
+
 
 task wrapper(type: Wrapper) {
- gradleVersion = '1.7'
+  gradleVersion = '1.7'
 }

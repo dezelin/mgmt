@@ -1,0 +1,107 @@
+{
+  "principal" : "ronen",
+  "modules" : [ {
+    "artifacts" : [ {
+      "name" : "web-1.0.zip",
+      "sha1" : "f64ce844267224aeae6ca5ad69104816b7767a54",
+      "md5" : "b093fc7e2a5fd675b778d3470968515b",
+      "type" : "zip"
+    }, {
+      "name" : "web-1.0.jar",
+      "sha1" : "5205bd911060238a34d39a760987d162b97983bb",
+      "md5" : "8a1c68c3aa87fd4931feb9226c2bbd5a",
+      "type" : "jar"
+    } ],
+    "dependencies" : [ {
+      "scopes" : [ "jruby" ],
+      "id" : "org.jruby:jruby-complete:1.7.4",
+      "sha1" : "74984d84846523bd7da49064679ed1ccf199e1db",
+      "md5" : "be7116ad25e9535a09bbd1a49934ab30",
+      "type" : "jar"
+    }, {
+      "scopes" : [ "runtime" ],
+      "id" : "net.lingala.zip4j:zip4j:1.2.3",
+      "sha1" : "8eb321c4cd5c94c5c08f6ee15d268b06d2c9ca56",
+      "md5" : "98381c2e03af739d6e17eebcdca211a9",
+      "type" : "jar"
+    }, {
+      "scopes" : [ "runtime" ],
+      "id" : "org.xeustechnologies:jcl-core:2.3",
+      "sha1" : "47142afb74cacc87319fb2fa37a082001a5b8452",
+      "md5" : "33d316f574f0bd0ecbad28d742527a4e",
+      "type" : "jar"
+    }, {
+      "scopes" : [ "runtime" ],
+      "id" : "mgmt:cloudius:1.0",
+      "sha1" : "3f7027a43c3cfb4843da3063486adcbb52340380",
+      "md5" : "7c7dd5f9ea973b9a7b24250860db8562",
+      "type" : "jar"
+    }, {
+      "scopes" : [ "runtime" ],
+      "id" : "mgmt:cli:1.0",
+      "sha1" : "6c1642ed74eeb44c66928daa12611ad345a7a049",
+      "md5" : "b690471adbf0d828ea6e4d448186030f",
+      "type" : "jar"
+    }, {
+      "scopes" : [ "runtime" ],
+      "id" : "com.j256.simplejmx:simplejmx:1.1",
+      "sha1" : "1b8e492d34b37d01f13daa51e96837c0bd3b211f",
+      "md5" : "c83c14dc6ddd10339e5f8c9d6440ee38",
+      "type" : "jar"
+    }, {
+      "scopes" : [ "runtime" ],
+      "id" : "org.objenesis:objenesis:1.1",
+      "sha1" : "63db1176f16448172611266154e4f6d39a0e1e68",
+      "md5" : "2ca28c8062d2da57716f12df829373ea",
+      "type" : "jar"
+    }, {
+      "scopes" : [ "runtime" ],
+      "id" : "cglib:cglib-nodep:2.2",
+      "sha1" : "59afed7ab65e7ec6585d5bc60556c3cbd203532b",
+      "md5" : "753f4e9036e1fc6c3e07d3ab97ee6722",
+      "type" : "jar"
+    }, {
+      "scopes" : [ "runtime" ],
+      "id" : "org.openjdk:rhino:7",
+      "sha1" : "630f02a925475dbb3b52c64201441db4e176076d",
+      "md5" : "9ada6f592220149c5d7312015d6a52b9",
+      "type" : "jar"
+    } ],
+    "id" : "mgmt:web:1.0"
+  } ],
+  "agent" : {
+    "name" : "Gradle",
+    "version" : "1.2"
+  },
+  "buildAgent" : {
+    "name" : "Gradle",
+    "version" : "1.2"
+  },
+  "started" : "2013-09-11T02:04:45.437+0300",
+  "durationMillis" : 379166,
+  "artifactoryPrincipal" : "deployer",
+  "licenseControl" : {
+    "runChecks" : false,
+    "includePublishedArtifacts" : false,
+    "autoDiscover" : false,
+    "scopesList" : "",
+    "licenseViolationsRecipientsList" : ""
+  },
+  "buildRetention" : {
+    "deleteBuildArtifacts" : true,
+    "buildNumbersNotToBeDiscarded" : [ ],
+    "count" : -1
+  },
+  "governance" : {
+    "blackDuckProperties" : {
+      "runChecks" : false,
+      "autoCreateMissingComponentRequests" : false,
+      "autoDiscardStaleComponentRequests" : false,
+      "includePublishedArtifacts" : false
+    }
+  },
+  "name" : "mgmt",
+  "type" : "GRADLE",
+  "number" : "1378854286249",
+  "version" : "1.0.1"
+}
